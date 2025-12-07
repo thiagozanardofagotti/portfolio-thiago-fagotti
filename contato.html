@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio - Sobre Mim</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Sobre mim</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contato">
+        <h1>Entre em Contato</h1>
+        <p>Você pode entrar em contato comigo através das redes abaixo ou preenchendo o formulário:</p>
+        
+        <ul>
+            <li><strong>E-mail:</strong> thiagozanardofagotti@gmail.com</li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/thiago-fagotti-710170209" target="_blank">Perfil no LinkedIn</a></li>
+        </ul>
+        
+        <hr>
+
+        <h3>Envie uma mensagem direta:</h3>
+        <form id="form-contato">
+            <div>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            </div>
+
+            <div>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+            </div>
+
+            <div>
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem..." required></textarea>
+            </div>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Desenvolvido por Thiago Fagotti</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

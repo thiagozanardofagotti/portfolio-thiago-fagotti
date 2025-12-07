@@ -1,0 +1,182 @@
+/* =========================================
+   RESET GLOBAL E VARIÁVEIS
+   ========================================= */
+/* O seletor universal (*) reseta margens e define o modelo de caixa */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding não aumente a largura total */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Definindo cores variáveis para facilitar manutenção */
+:root {
+    --cor-primaria: #2c3e50; /* Azul escuro profissional */
+    --cor-secundaria: #e74c3c; /* Vermelho destaque (lembra SPFC, mas discreto) */
+    --cor-fundo: #f4f4f4;
+    --cor-texto: #333;
+    --cor-branca: #fff;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o rodapé fique no final mesmo com pouco conteúdo */
+}
+
+/* =========================================
+   CABEÇALHO E MENU (NAV)
+   ========================================= */
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Centraliza o conteúdo do menu */
+nav ul {
+    list-style: none; /* Remove as bolinhas da lista */
+    display: flex;    /* Transforma a lista vertical em horizontal (Flexbox) */
+    justify-content: center; /* Centraliza os itens */
+    gap: 20px;        /* Espaçamento entre os links */
+}
+
+nav a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: var(--cor-branca);
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px; /* Bordas arredondadas (Opcional recomendado) */
+    transition: background-color 0.3s; /* Suaviza o efeito hover */
+}
+
+/* Efeito ao passar o mouse (:hover) */
+nav a:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* =========================================
+   CONTEÚDO PRINCIPAL (SECTIONS)
+   ========================================= */
+section {
+    max-width: 800px; /* Limita a largura para leitura confortável */
+    margin: 40px auto; /* Centraliza o bloco na tela */
+    padding: 20px;
+    background-color: var(--cor-branca);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    flex: 1; /* Faz a section ocupar o espaço disponível empurrando o footer */
+}
+
+h1, h2, h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+h1 {
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 10px;
+}
+
+p, li {
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-left: 20px; /* Indentação para listas de conteúdo */
+}
+
+/* Estilo específico para remover bolinhas nas listas de formação/portfólio se desejar */
+#formacao ul, #portfolio ul {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+#formacao li, #portfolio li {
+    background: #f9f9f9;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-left: 5px solid var(--cor-primaria);
+    border-radius: 4px;
+}
+
+/* Links dentro do texto (ex: LinkedIn) */
+section a {
+    color: var(--cor-secundaria);
+    font-weight: bold;
+}
+
+/* =========================================
+   FORMULÁRIO DE CONTATO
+   ========================================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    align-self: flex-start; /* Botão alinhado à esquerda */
+}
+
+button:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+/* =========================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================= */
+@media (max-width: 600px) {
+    /* Ajusta o menu para ficar vertical em telas pequenas */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Reduz as margens do conteúdo principal */
+    section {
+        margin: 20px 15px;
+        padding: 15px;
+    }
+
+    /* O formulário ocupa 100% da largura disponível */
+    input, textarea {
+        width: 100%;
+    }
+}
