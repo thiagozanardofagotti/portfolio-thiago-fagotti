@@ -1,4 +1,4 @@
-// Aguarda o carregamento completo do DOM (da página)
+// Aguarda o carregamento completo do DOM
 document.addEventListener("DOMContentLoaded", function() {
     
     // Verifica se estamos na página de contato procurando o formulário
@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const email = document.getElementById("email").value.trim();
             const mensagem = document.getElementById("mensagem").value.trim();
 
-            // 2. Validação dos Campos (Obrigatório)
+            // 2. Validação dos Campos
             if (nome === "" || email === "" || mensagem === "") {
                 alert("Por favor, preencha todos os campos obrigatórios.");
-                return; // Para a execução se houver erro
+                return;
             }
 
             // 3. Validação de formato de E-mail simples
@@ -27,8 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 return;
             }
 
-            // 4. Simulação de Envio e Feedback (Obrigatório)
-            // Aqui simula o envio bem-sucedido
+            // 4. Simulação de Envio e Feedback
             alert("Obrigado, " + nome + "! Sua mensagem foi enviada com sucesso.");
 
             // 5. Limpar o formulário após o envio
